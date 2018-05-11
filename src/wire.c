@@ -61,12 +61,15 @@ void solveWire(void) {
         case 4:
             red = color(c, "r");
             if (red > 1) {
-                printf("is the last number of the serial number odd? ");
-                if (yes()) {
+                if (oddSerial == -1) {
+                    printf("is the last number of the serial number odd? ");
+                    if (yes()) { oddSerial = 1; }
+                    else { oddSerial = 0; }
+                }
+                if (oddSerial) {
                     printf("cut the last red wire\n");
                     break;
                 }
-                oddSerial = 0;
             }
             blue = color(c, "b");
             if ((blue == 1) || (red == 0 && *(c+3) == 'y')) {
@@ -83,8 +86,12 @@ void solveWire(void) {
         case 5:
             if (*(c+4) == 'k') {
                 k = 1;
-                printf("is the last number of the serial number odd? ");
-                if (yes()) {
+                if (oddSerial == -1) {
+                    printf("is the last number of the serial number odd? ");
+                    if (yes()) { oddSerial = 1; }
+                    else { oddSerial = 0; }
+                }
+                if (oddSerial) {
                     printf("cut the last wire\n");
                     break;
                 }
@@ -104,8 +111,12 @@ void solveWire(void) {
         case 6:
             yellow = color(c, "y");
             if (yellow == 0) {
-                printf("is the last number of the serial number odd? ");
-                if (yes()) {
+                if (oddSerial == -1) {
+                    printf("is the last number of the serial number odd? ");
+                    if (yes()) { oddSerial = 1; }
+                    else { oddSerial = 0; }
+                }
+                if (oddSerial) {
                     printf("cut the third wire\n");
                     break;
                 }
