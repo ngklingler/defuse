@@ -125,9 +125,3 @@ void solveWire(void) {
     }
     solveWire();
 }
-
-int main(void) {
-    solveWire();
-
-    return 0;
-}
