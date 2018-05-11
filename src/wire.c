@@ -3,15 +3,7 @@
 #include "bomb.h"
 
 //extern vars
-extern int oddSerial;
-
-// signatures
-void solveWire(void);
-int yes(void);
-int color(char *wires, char *color);
-int main(void);
-
-//implementations
+int oddSerial;
 
 int color(char *wires, char *color) {
     int result = 0;
