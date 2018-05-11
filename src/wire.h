@@ -4,7 +4,6 @@
 //signatures
 
 int color(char *wires, char *color);
-int yes(void);
 void solveWire(void);
 
 #endif

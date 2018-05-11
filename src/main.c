@@ -10,6 +10,7 @@ int FRK = -1;
 
 int main(void) {
     solveWire();
+    solveButton();
 
     return 0;
 }

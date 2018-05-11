@@ -13,15 +13,7 @@ int color(char *wires, char *color) {
     return result;
 }
 
-int yes(void) {
-    char c;
-    if ((c = getchar()) == 'y') {
-        c = getchar();
-        return 1;
-    }
-    c = getchar();
-    return 0;
-}
+
 
 void solveWire(void) {
     printf("are there any wire modules? ");

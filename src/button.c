@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "bomb.h"
+#include "button.h"
 
 // extern vars
 int oddSerial;
@@ -30,7 +32,7 @@ void solveButton(void) {
         releaseButton();
         break;
         }
-        if (*(button+1) == "d") {
+        if (*(button+1) == 'd') {
             if (batteries == -1) {
                 printf("how many batteries? ");
                 char c[2];
@@ -44,7 +46,7 @@ void solveButton(void) {
                 break;
             }
         }
-        if (*(button) == "w") {
+        if (*(button) == 'w') {
             if (CAR == -1) {
                 printf("any lit indicators that say CAR? ");
                 if (yes()) { CAR = 1; }
@@ -74,7 +76,7 @@ void solveButton(void) {
                 break;
             }
         }
-        if (*(button) == "y") {
+        if (*(button) == 'y') {
             releaseButton();
             break;
         }
@@ -94,10 +96,10 @@ void releaseButton(void) {
     char c[2];
     c[0] = getchar();
     c[1] = getchar();
-    if (c[0] == "b") {
+    if (c[0] == 'b') {
         printf("release when 4 in any timer position\n");
     }
-    else if (c[0] == "y") {
+    else if (c[0] == 'y') {
         printf("release when 5 in any timer position\n");
     } else {
         printf("release when 1 in any timer position\n");

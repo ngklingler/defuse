@@ -10,4 +10,6 @@ extern int batteries; // number of batteries, -1 if not defined
 extern int CAR; // 1 if car, 0 if not, -1 if not defined
 extern int FRK; // 1 if car, 0 if not, -1 if not defined
 
+int yes(void);
+
 #endif
