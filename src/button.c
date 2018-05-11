@@ -90,5 +90,17 @@ void solveButton(void) {
 }
 
 void releaseButton(void) {
+    printf("hold the button, what color is the strip? ");
+    char c[2];
+    c[0] = getchar();
+    c[1] = getchar();
+    if (c[0] == "b") {
+        printf("release when 4 in any timer position\n");
+    }
+    else if (c[0] == "y") {
+        printf("release when 5 in any timer position\n");
+    } else {
+        printf("release when 1 in any timer position\n");
+    }
     return;
 }
