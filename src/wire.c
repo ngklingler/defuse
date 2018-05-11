@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "bomb.h"
 
-int oddSerial; //1 if last num of serial num is odd
+//extern vars
+extern int oddSerial;
 
 // signatures
 void solveWire(void);
